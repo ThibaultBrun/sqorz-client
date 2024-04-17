@@ -21,3 +21,7 @@ A simple JS Lib to deal with sqorz
 * Event details & results *
 ```https://our.sqorz.com/json/event/66080be815cb4f5463183d6e```
 
+
+## Specials codes
+100000 = DNF ( Did not finish)
+103000 = DNS ( Did not start)
