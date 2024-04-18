@@ -1,4 +1,5 @@
-class Organization {
+export class Organization {
+
     private id: string;
     private name: string;
 

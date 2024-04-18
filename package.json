@@ -4,13 +4,14 @@
   "description": "A simple JS Lib to deal with sqorz",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.12.7",
+    "jest": "^29.7.0",
     "typescript": "^5.4.5"
   }
 }
