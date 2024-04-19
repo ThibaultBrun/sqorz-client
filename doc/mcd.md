@@ -2,13 +2,13 @@
 
 ```mermaid
 erDiagram
-    ORGANIZATION }o--o{ CLUB : contains
-    PILOT ||--o{ CLUB : "is licensed in"
-    EVENT ||--o{ CLUB : "receive"
-    EVENT ||--o{ ORGANIZATION : "organize"
-    EVENT ||--o{ ORGANIZATION : "organize"
-    RACE ||--o{ EVENT : "is composed"
-    PILOT ||--o{ PILOT_RACE : "is composed"
+    ORGANIZATION ||--|{ CLUB : contains
+    PILOT }o--|| CLUB : " licensed in"
+    EVENT }o--|| CLUB : "receive"
+    EVENT }o--|| ORGANIZATION : "organize"
+    EVENT }o--|| ORGANIZATION : "organize"
+    RACE }|--|| EVENT : "is composed"
+    PILOT }o--o{ PILOT_RACE : "is composed"
     RACE ||--o{ PILOT_RACE : "is composed"
     
     ORGANIZATION {
