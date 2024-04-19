@@ -46,7 +46,7 @@ erDiagram
         string id PK
         string id_event FK
         string name "the category"
-        int weight "1=Final 2=SF .."
+        int round "Final/SF/etc.."
     }
 
     PILOT_RACE {
