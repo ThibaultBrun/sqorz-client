@@ -2,10 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Pilot = void 0;
 class Pilot {
-    constructor(id, idClub, genre, name, firstName, number, birthdate) {
+    constructor(id, idClub, gender, name, firstName, number, birthdate) {
         this.id = id;
         this.idClub = idClub;
-        this.genre = genre;
+        this.gender = gender;
         this.name = name;
         this.firstName = firstName;
         this.number = number;
@@ -17,8 +17,8 @@ class Pilot {
     getIdClub() {
         return this.idClub;
     }
-    getGenre() {
-        return this.genre;
+    getGender() {
+        return this.gender;
     }
     getName() {
         return this.name;
@@ -35,9 +35,9 @@ class Pilot {
 }
 exports.Pilot = Pilot;
 (function (Pilot) {
-    let Genre;
-    (function (Genre) {
-        Genre[Genre["GIRL"] = 0] = "GIRL";
-        Genre[Genre["BOY"] = 1] = "BOY";
-    })(Genre = Pilot.Genre || (Pilot.Genre = {}));
+    let Gender;
+    (function (Gender) {
+        Gender[Gender["GIRL"] = 0] = "GIRL";
+        Gender[Gender["BOY"] = 1] = "BOY";
+    })(Gender = Pilot.Gender || (Pilot.Gender = {}));
 })(Pilot || (exports.Pilot = Pilot = {}));

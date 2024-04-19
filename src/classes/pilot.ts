@@ -1,58 +1,62 @@
 export class Pilot {
+  private id: string;
+  private idClub: string;
+  private gender: Pilot.Gender;
+  private name: string;
+  private firstName: string;
+  private number: string;
+  private birthdate: number;
 
-    private id: string;
-    private idClub: string;
-    private genre: Pilot.Genre;
-    private name: string;
-    private firstName: string;
-    private number: string;
-    private birthdate: number;
+  public constructor(
+    id: string,
+    idClub: string,
+    gender: Pilot.Gender,
+    name: string,
+    firstName: string,
+    number: string,
+    birthdate: number
+  ) {
+    this.id = id;
+    this.idClub = idClub;
+    this.gender = gender;
+    this.name = name;
+    this.firstName = firstName;
+    this.number = number;
+    this.birthdate = birthdate;
+  }
 
-    public constructor(id: string, idClub: string, genre : Pilot.Genre, name: string, firstName: string, number: string, birthdate: number) {
-        this.id = id;
-        this.idClub = idClub;
-        this.genre = genre;
-        this.name = name;
-        this.firstName = firstName;
-        this.number = number;
-        this.birthdate = birthdate;
-    }
+  public getId(): string {
+    return this.id;
+  }
 
-    public getId() {
-        return this.id;
-    }
+  public getIdClub(): string {
+    return this.idClub;
+  }
 
-    public getIdClub() {
-        return this.idClub;
-    }
+  public getGender(): Pilot.Gender {
+    return this.gender;
+  }
 
-    public getGenre() {
-        return this.genre;
-    }
+  public getName(): string {
+    return this.name;
+  }
 
-    public getName() {
-        return this.name;
-    }
+  public getFirstName(): string {
+    return this.firstName;
+  }
 
-    public getFirstName() {
-        return this.firstName;
-    }
+  public getNumber(): string {
+    return this.number;
+  }
 
-    public getNumber() {
-        return this.number;
-    }
-
-    public getBirthDate() {
-        return this.birthdate;
-    }
-
+  public getBirthDate(): number {
+    return this.birthdate;
+  }
 }
 
-export namespace Pilot
-{
-    export enum Genre
-    {
-        GIRL,
-        BOY
-    }
+export namespace Pilot {
+  export enum Gender {
+    GIRL,
+    BOY,
+  }
 }
