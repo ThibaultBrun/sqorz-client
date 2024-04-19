@@ -1,6 +1,8 @@
-const {Organization} = require('../../classes/organization');
+const { Organization } = require('../../classes/organization');
 
-const organization = new Organization("anIdentifier", "aName");
+const organization = new Organization()
+    .setId("anIdentifier")
+    .setName("aName");
 
 test('Organization constructor Id', () => {
     expect(organization.getId()).toBe("anIdentifier");

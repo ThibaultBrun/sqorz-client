@@ -1,17 +1,25 @@
 export class Organization {
-  private id: string;
-  private name: string;
 
-  public constructor(id: string, name: string) {
-    this.id = id;
-    this.name = name;
+  private _id: string | null;
+  private _name: string | null;
+
+
+  public getId(): string | null {
+    return this._id;
   }
 
-  public getId(): string {
-    return this.id;
+  public setId(id: string): Organization {
+    this._id = id;
+    return this;
   }
 
-  public getName(): string {
-    return this.name;
+  public getName(): string | null {
+    return this._name;
   }
+
+  public setName(name: string): Organization {
+    this._name = name;
+    return this;
+  }
+
 }
