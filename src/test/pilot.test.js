@@ -1,7 +1,7 @@
 const { Pilot } = require('../classes/pilot');
 
 // TODO use builder pattern .. 
-const pilot = new Pilot("anIdentifier", "anIdClub", Pilot.Genre.BOY, "aName", "Charly", "68b", "2017");
+const pilot = new Pilot("anIdentifier", "anIdClub", Pilot.Gender.BOY, "aName", "Charly", "68b", "2017");
 
 test('Pilot constructor Id', () => {
     expect(pilot.getId()).toBe("anIdentifier");
@@ -9,8 +9,8 @@ test('Pilot constructor Id', () => {
 test('Pilot constructor club', () => {
     expect(pilot.getIdClub()).toBe("anIdClub");
 });
-test('Pilot constructor genre', () => {
-    expect(pilot.getGenre()).toBe(Pilot.Genre.BOY);
+test('Pilot constructor gender', () => {
+    expect(pilot.getGender()).toBe(Pilot.Gender.BOY);
 });
 test('Pilot constructor name', () => {
     expect(pilot.getName()).toBe("aName");
