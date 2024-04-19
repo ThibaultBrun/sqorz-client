@@ -1,23 +1,33 @@
 export class Club {
-  private id: string;
-  private idOrganization: string;
-  private name: string;
+  
+  private _id: string | null;
+  private _idOrganization: string | null;
+  private _name: string | null;
 
-  public constructor(id: string, idOrganization: string, name: string) {
-    this.id = id;
-    this.idOrganization = idOrganization;
-    this.name = name;
+  public getId(): string | null {
+    return this._id;
   }
 
-  public getId(): string {
-    return this.id;
+  public setId(id: string): Club {
+    this._id = id;
+    return this;
   }
 
-  public getName(): string {
-    return this.name;
+  public getName(): string | null {
+    return this._name;
   }
 
-  public getIdOrganization(): string {
-    return this.idOrganization;
+  public setName(name: string): Club {
+    this._name = name;
+    return this;
   }
+  public getIdOrganization(): string | null {
+    return this._idOrganization;
+  }
+
+  public setIdOrganization(idOrganization: string): Club {
+    this._idOrganization = idOrganization;
+    return this;
+  }
+
 }

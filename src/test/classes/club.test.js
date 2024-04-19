@@ -1,6 +1,9 @@
-const {Club} = require('../../classes/club');
+const { Club } = require('../../classes/club');
 
-const club = new Club("anIdentifier","anOrganizationId", "aName");
+const club = new Club()
+    .setId("anIdentifier")
+    .setIdOrganization("anOrganizationId")
+    .setName("aName");
 
 test('Club constructor Id', () => {
     expect(club.getId()).toBe("anIdentifier");
