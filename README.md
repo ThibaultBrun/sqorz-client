@@ -16,13 +16,13 @@ A simple JS Lib to deal with sqorz
 
 ## Events
 
-* Global *
+*Global*
 ```https://our.sqorz.com/json/events/?startDate=2024-04-17&endDate=2024-04-24```
 
-* By organization *
+*By organization*
 ```https://our.sqorz.com/json/org/ffcnoaq```
 
-* Event details & results *
+*Event details & results*
 ```https://our.sqorz.com/json/event/66080be815cb4f5463183d6e```
 
 
