@@ -2,35 +2,54 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Pilot = void 0;
 class Pilot {
-    constructor(id, idClub, gender, name, firstName, number, birthdate) {
-        this.id = id;
-        this.idClub = idClub;
-        this.gender = gender;
-        this.name = name;
-        this.firstName = firstName;
-        this.number = number;
-        this.birthdate = birthdate;
-    }
     getId() {
-        return this.id;
+        return this._id;
+    }
+    setId(id) {
+        this._id = id;
+        return this;
     }
     getIdClub() {
-        return this.idClub;
+        return this._idClub;
+    }
+    setIdClub(idClub) {
+        this._idClub = idClub;
+        return this;
     }
     getGender() {
-        return this.gender;
+        return this._gender;
+    }
+    setGender(gender) {
+        this._gender = gender;
+        return this;
     }
     getName() {
-        return this.name;
+        return this._name;
+    }
+    setName(name) {
+        this._name = name;
+        return this;
     }
     getFirstName() {
-        return this.firstName;
+        return this._firstName;
+    }
+    setFirstName(firstName) {
+        this._firstName = firstName;
+        return this;
     }
     getNumber() {
-        return this.number;
+        return this._number;
+    }
+    setNumber(number) {
+        this._number = number;
+        return this;
     }
     getBirthDate() {
-        return this.birthdate;
+        return this._birthdate;
+    }
+    setBirthDate(birthdate) {
+        this._birthdate = birthdate;
+        return this;
     }
 }
 exports.Pilot = Pilot;

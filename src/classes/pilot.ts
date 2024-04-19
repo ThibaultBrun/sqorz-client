@@ -1,56 +1,72 @@
 export class Pilot {
-  private id: string;
-  private idClub: string;
-  private gender: Pilot.Gender;
-  private name: string;
-  private firstName: string;
-  private number: string;
-  private birthdate: number;
 
-  public constructor(
-    id: string,
-    idClub: string,
-    gender: Pilot.Gender,
-    name: string,
-    firstName: string,
-    number: string,
-    birthdate: number
-  ) {
-    this.id = id;
-    this.idClub = idClub;
-    this.gender = gender;
-    this.name = name;
-    this.firstName = firstName;
-    this.number = number;
-    this.birthdate = birthdate;
+  private _id: string | null;
+  private _idClub: string | null;
+  private _gender: Pilot.Gender | null;
+  private _name: string | null;
+  private _firstName: string | null;
+  private _number: string | null;
+  private _birthdate: number | null;
+
+  public getId(): string | null {
+    return this._id;
   }
 
-  public getId(): string {
-    return this.id;
+  public setId(id: string):Pilot {
+    this._id = id;
+    return this;
   }
 
-  public getIdClub(): string {
-    return this.idClub;
+  public getIdClub(): string | null {
+    return this._idClub;
   }
 
-  public getGender(): Pilot.Gender {
-    return this.gender;
+  public setIdClub(idClub: string):Pilot {
+    this._idClub = idClub;
+    return this;
   }
 
-  public getName(): string {
-    return this.name;
+  public getGender(): Pilot.Gender | null {
+    return this._gender;
   }
 
-  public getFirstName(): string {
-    return this.firstName;
+  public setGender(gender: Pilot.Gender):Pilot {
+    this._gender = gender;
+    return this;
   }
 
-  public getNumber(): string {
-    return this.number;
+  public getName(): string | null {
+    return this._name;
+  }
+  public setName(name: string):Pilot {
+    this._name = name;
+    return this;
   }
 
-  public getBirthDate(): number {
-    return this.birthdate;
+  public getFirstName(): string | null {
+    return this._firstName;
+  }
+
+  public setFirstName(firstName: string):Pilot {
+    this._firstName = firstName;
+    return this;
+  }
+  public getNumber(): string | null {
+    return this._number;
+  }
+
+  public setNumber(number: string):Pilot {
+    this._number = number;
+    return this;
+  }
+
+  public getBirthDate(): number | null {
+    return this._birthdate;
+  }
+
+  public setBirthDate(birthdate: number):Pilot {
+    this._birthdate = birthdate;
+    return this;
   }
 }
 

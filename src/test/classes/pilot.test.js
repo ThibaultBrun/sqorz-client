@@ -1,7 +1,13 @@
 const { Pilot } = require('../../classes/pilot');
 
-// TODO use builder pattern .. 
-const pilot = new Pilot("anIdentifier", "anIdClub", Pilot.Gender.BOY, "aName", "Charly", "68b", "2017");
+const pilot = new Pilot()
+    .setId("anIdentifier")
+    .setIdClub("anIdClub")
+    .setGender(Pilot.Gender.BOY)
+    .setName("aName")
+    .setFirstName("Charly")
+    .setNumber("68b")
+    .setBirthDate("2017");
 
 test('Pilot constructor Id', () => {
     expect(pilot.getId()).toBe("anIdentifier");
