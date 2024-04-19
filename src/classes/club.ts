@@ -1,5 +1,5 @@
 export class Club {
-  
+
   private _id: string | null;
   private _idOrganization: string | null;
   private _name: string | null;
