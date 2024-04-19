@@ -1,6 +1,10 @@
 # sqorz-client
 A simple JS Lib to deal with sqorz
 
+## Data structure
+[check the diagrame](doc/mcd.md)
+
+
 
 # Lists of requests
 
