@@ -1,2 +1,3 @@
 node_modules/
-src/classes/*.js
+src/types/*.js
+src/services/*.js

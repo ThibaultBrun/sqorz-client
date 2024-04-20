@@ -1,4 +1,4 @@
-const { Club } = require('../../classes/club');
+const { Club } = require('../../types/club');
 
 const club = new Club()
     .setId("anIdentifier")

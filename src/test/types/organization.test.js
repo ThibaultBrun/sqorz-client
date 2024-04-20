@@ -1,4 +1,4 @@
-const { Organization } = require('../../classes/organization');
+const { Organization } = require('../../types/organization');
 
 const organization = new Organization()
     .setId("anIdentifier")

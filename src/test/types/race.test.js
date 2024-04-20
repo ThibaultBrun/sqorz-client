@@ -1,4 +1,4 @@
-const { Race } = require('../../classes/race');
+const { Race } = require('../../types/race');
 
 const race = new Race()
     .setId("anIdentifier")
