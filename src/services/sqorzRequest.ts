@@ -7,8 +7,8 @@ export class SqorzRequest {
     private static EVENTS_ENDPOINT: string = `${SqorzRequest.BASE_URL}events/`;
     private static EVENTS_BY_ORGANIZATION_ENDPOINT: string = `${SqorzRequest.BASE_URL}org/`;
 
-    public static async getOrganizationsByCountry(countryCode: string) {
-        return this.fetch(`${SqorzRequest.ORGANIZATION_ENDPOINT}${countryCode}`);
+    public static async getOrganizationsByRegion(regionCode: string) {
+        return this.fetch(`${SqorzRequest.ORGANIZATION_ENDPOINT}${regionCode}`);
     }
 
     public static async getEvents(params: object = {}) {
