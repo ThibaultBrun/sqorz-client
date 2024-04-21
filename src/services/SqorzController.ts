@@ -1,9 +1,10 @@
 import { Organization } from "../types/organization";
 import { SqorzRequest } from "./sqorzRequest";
+import { Event } from "../types/event"
 
 export class SqorzController {
 
-    public static async listOrganization(regionCode: string):Promise<Array<Organization>>{
+    public static async listOrganization(regionCode: string): Promise<Array<Organization>> {
         const organizations = new Array<Organization>();
         const datas = await SqorzRequest.getOrganizationsByRegion(regionCode)
         const accounts = datas.accounts;
@@ -18,12 +19,27 @@ export class SqorzController {
         return organizations
     }
 
-    public static async listEventInProgress(regionCode:string){
-
+    public static async listEventInProgress(regionCode: string): Promise<Array<Event>> {
+        const events = new Array<Event>();
+        const now = new Date();
+        const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2,"0")}-${String(now.getDate()).padStart(2,"0")}`
+        const datas = await SqorzRequest.getEvents({
+            regionCode: regionCode,
+            startDate: today,
+            endDate: today
+        });
+        return events;
     }
 }
+/*
+SqorzController.listEventInProgress("fr").then((events :Array<Event>) => {
+    console.log(events);
+    console.log("nb of events : ");
+    console.log(events.length);
+}).catch((error)=>{console.error(error.message);});
+*/
 
-SqorzController.listOrganization("fr").then((organizations :Array<Organization>) => {
+/*SqorzController.listOrganization("fr").then((organizations :Array<Organization>) => {
     console.log("nb of organization : ");
     console.log(organizations.length);
-})
+})*/
