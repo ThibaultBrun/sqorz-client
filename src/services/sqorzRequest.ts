@@ -38,5 +38,4 @@ export class SqorzRequest {
             throw new Error(`Error while decoding data from ${url.href}`);
         }
     }
-
 }
