@@ -1,41 +1,42 @@
+import { Url } from "url";
+
 export class SqorzRequest {
 
-    private static ORGANIZATION_ENDPOINT: string = "https://our.sqorz.com/json/region/";
-    private static EVENTS_ENDPOINT: string = "https://our.sqorz.com/json/events/";
-    private static EVENTS_BY_ORGANIZATION_ENDPOINT: string = "https://our.sqorz.com/json/org/";
+    private static BASE_URL: string = "https://our.sqorz.com/json/";
+    private static ORGANIZATION_ENDPOINT: string = `${SqorzRequest.BASE_URL}region/`;
+    private static EVENTS_ENDPOINT: string = `${SqorzRequest.BASE_URL}events/`;
+    private static EVENTS_BY_ORGANIZATION_ENDPOINT: string = `${SqorzRequest.BASE_URL}org/`;
 
     public static async getOrganizationsByCountry(countryCode: string) {
-        const url = `${SqorzRequest.ORGANIZATION_ENDPOINT}${countryCode}`;
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`Error while fetching data from ${url}`);
-        }
-        const organizations = await response.json();
-        return organizations;
+        return this.fetch(`${SqorzRequest.ORGANIZATION_ENDPOINT}${countryCode}`);
     }
 
-    public static async getEvents(regionCode: string | null, dateStart: string | null, dateEnd: string | null) {
-        const eventUrl = new URL(SqorzRequest.EVENTS_ENDPOINT);
-        if (regionCode) eventUrl.searchParams.append("regionCode", regionCode);
-        if (dateStart) eventUrl.searchParams.append("startDate", dateStart);
-        if (dateEnd) eventUrl.searchParams.append("endDate", dateEnd);
-
-        const response = await fetch(eventUrl.href);
-        if (!response.ok) {
-            throw new Error(`Error while fetching data from ${eventUrl.href}`);
-        }
-        const events = await response.json();
-        return events;
+    public static async getEvents(params: object = {}) {
+        return this.fetch(SqorzRequest.EVENTS_ENDPOINT, params);
     }
 
     public static async getEventsByOrganization(organization: string) {
-        const url = `${SqorzRequest.EVENTS_BY_ORGANIZATION_ENDPOINT}${organization}`;
-        console.log(url);
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`Error while fetching data from ${url}`);
-        }
-        const events = await response.json();
-        return events;
+        return this.fetch(`${SqorzRequest.EVENTS_BY_ORGANIZATION_ENDPOINT}${organization}`);
     }
+
+    private static async fetch(endpoint: string | URL, params: object = {}) {
+        const url = new URL(endpoint);
+
+        const keys = Object.keys(params) as Array<keyof typeof params>;
+        keys.forEach((key) => {
+            url.searchParams.append(key as string, params[key]);
+        });
+
+        const response = await fetch(url.href);
+        if (!response.ok) {
+            throw new Error(`Error while fetching data from ${url.href}`);
+        }
+        try {
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            throw new Error(`Error while decoding data from ${url.href}`);
+        }
+    }
+
 }
