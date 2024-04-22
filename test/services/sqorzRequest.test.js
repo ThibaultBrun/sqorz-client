@@ -1,4 +1,4 @@
-const { SqorzRequest } = require('../../services/sqorzRequest');
+const { SqorzRequest } = require('../../src/services/sqorzRequest');
 
 // Organizations
 test('getOrganizationsByCountry OK', async () => {

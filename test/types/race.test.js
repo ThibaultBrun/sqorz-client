@@ -1,4 +1,4 @@
-const { Race } = require('../../types/race');
+const { Race } = require('../../src/types/race');
 
 const race = new Race()
     .setId("anIdentifier")

@@ -1,6 +1,6 @@
-import { Organization } from "../types/organization";
-import { SqorzRequest } from "./sqorzRequest";
-import { Event } from "../types/event"
+import { Organization } from "./types/organization";
+import { SqorzRequest } from "./services/sqorzRequest";
+import { Event } from "./types/event"
 
 export class SqorzController {
 

@@ -1,4 +1,4 @@
-const { Pilot } = require('../../types/pilot');
+const { Pilot } = require('../../src/types/pilot');
 
 const pilot = new Pilot()
     .setId("anIdentifier")

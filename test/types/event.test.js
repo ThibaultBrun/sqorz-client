@@ -1,4 +1,4 @@
-const { Event } = require("../../types/event");
+const { Event } = require("../../src/types/event");
 
 const event = new Event()
     .setId("anId")
