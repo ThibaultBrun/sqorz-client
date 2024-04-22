@@ -1,7 +1,6 @@
 import { Organization } from "./types/organization";
 import { SqorzRequest } from "./services/sqorzRequest";
 import { Event } from "./types/event"
-
 export class SqorzClient {
 
     public static async listOrganization(regionCode: string): Promise<Array<Organization>> {
