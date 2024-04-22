@@ -2,7 +2,7 @@ import { Organization } from "./types/organization";
 import { SqorzRequest } from "./services/sqorzRequest";
 import { Event } from "./types/event"
 
-export class SqorzController {
+export class SqorzClient {
 
     public static async listOrganization(regionCode: string): Promise<Array<Organization>> {
         const organizations = new Array<Organization>();
@@ -31,15 +31,15 @@ export class SqorzController {
         return events;
     }
 }
-/*
-SqorzController.listEventInProgress("fr").then((events :Array<Event>) => {
+
+/*SqorzClient.listEventInProgress("fr").then((events :Array<Event>) => {
     console.log(events);
     console.log("nb of events : ");
     console.log(events.length);
 }).catch((error)=>{console.error(error.message);});
-*/
 
-/*SqorzController.listOrganization("fr").then((organizations :Array<Organization>) => {
+
+SqorzClient.listOrganization("fr").then((organizations :Array<Organization>) => {
     console.log("nb of organization : ");
     console.log(organizations.length);
 })*/

@@ -1,6 +1,6 @@
 {
   "name": "sqorz-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple JS Lib to deal with sqorz",
   "main": "src/SqorzClient.js",
   "repository": "thibaultbrun/sqorz-client",
