@@ -1,5 +1,6 @@
 {
   "name": "sqorz-client",
+  "type": "module",
   "version": "1.0.10",
   "description": "A simple JS Lib to deal with sqorz",
   "files": [
