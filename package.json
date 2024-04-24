@@ -1,6 +1,6 @@
 {
   "name": "sqorz-client",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "A simple JS Lib to deal with sqorz",
   "files": [
     "src"
