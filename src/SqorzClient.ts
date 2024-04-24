@@ -1,7 +1,7 @@
 import { Organization } from "./types/organization";
 import { Event } from "./types/event"
 import { SqorzRequest } from "./services/sqorzRequest";
-module.exports = class SqorzClient {
+export class SqorzClient {
 
     public static async listOrganization(regionCode: string): Promise<Array<Organization>> {
         const organizations = new Array<Organization>();
@@ -30,15 +30,16 @@ module.exports = class SqorzClient {
         return events;
     }
 }
-
-/*SqorzClient.listEventInProgress("fr").then((events :Array<Event>) => {
+/*
+SqorzClient.listEventInProgress("fr").then((events: Array<Event>) => {
     console.log(events);
     console.log("nb of events : ");
     console.log(events.length);
-}).catch((error)=>{console.error(error.message);});
+}).catch((error) => { console.error(error.message); });
 
 
-SqorzClient.listOrganization("fr").then((organizations :Array<Organization>) => {
+SqorzClient.listOrganization("fromage").then((organizations: Array<Organization>) => {
     console.log("nb of organization : ");
     console.log(organizations.length);
-})*/
+}).catch((e)=>{console.log(e);console.log("oui");});
+*/
