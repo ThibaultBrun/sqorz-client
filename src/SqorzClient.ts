@@ -1,7 +1,7 @@
 import { Organization } from "./types/organization";
-import { SqorzRequest } from "./services/sqorzRequest";
 import { Event } from "./types/event"
-export class SqorzClient {
+import { SqorzRequest } from "./services/sqorzRequest";
+module.exports = class SqorzClient {
 
     public static async listOrganization(regionCode: string): Promise<Array<Organization>> {
         const organizations = new Array<Organization>();
@@ -21,7 +21,7 @@ export class SqorzClient {
     public static async listEventInProgress(regionCode: string): Promise<Array<Event>> {
         const events = new Array<Event>();
         const now = new Date();
-        const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2,"0")}-${String(now.getDate()).padStart(2,"0")}`
+        const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`
         const datas = await SqorzRequest.getEvents({
             regionCode: regionCode,
             startDate: today,
