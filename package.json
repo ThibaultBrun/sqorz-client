@@ -10,7 +10,12 @@
   "scripts": {
     "test": "jest"
   },
-  "keywords": [],
+  "keywords": [
+    "BMX",
+    "Sqorz",
+    "race",
+    "comp"
+  ],
   "author": "Thibault Brun",
   "license": "ISC",
   "devDependencies": {
