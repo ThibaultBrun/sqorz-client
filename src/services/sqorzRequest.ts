@@ -1,5 +1,3 @@
-import { Url } from "url";
-
 export class SqorzRequest {
 
     private static BASE_URL: string = "https://our.sqorz.com/json/";
