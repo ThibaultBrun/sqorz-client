@@ -7,7 +7,6 @@
     "src"
   ],
   "main": "index.js",
-  "types": "index.js",
   "repository": "thibaultbrun/sqorz-client",
   "scripts": {
     "test": "jest"

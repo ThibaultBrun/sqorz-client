@@ -1,9 +1,10 @@
-import { Organization } from "./src/types/organization";
-import { Club } from "./src/types/club";
-import { SqorzClient } from "./src/SqorzClient";
-import { Event } from "./src/types/event";
-import { Pilot } from "./src/types/pilot";
-import { Race } from "./src/types/race";
-import { SqorzRequest } from "./src/services/sqorzRequest";
-
-module.exports = { Organization, Club, SqorzClient, Event, Pilot, Race, SqorzRequest };
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const organization_1 = require("./src/types/organization");
+const club_1 = require("./src/types/club");
+const SqorzClient_1 = require("./src/SqorzClient");
+const event_1 = require("./src/types/event");
+const pilot_1 = require("./src/types/pilot");
+const race_1 = require("./src/types/race");
+const sqorzRequest_1 = require("./src/services/sqorzRequest");
+module.exports = { Organization: organization_1.Organization, Club: club_1.Club, SqorzClient: SqorzClient_1.SqorzClient, Event: event_1.Event, Pilot: pilot_1.Pilot, Race: race_1.Race, SqorzRequest: sqorzRequest_1.SqorzRequest };
